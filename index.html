@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    change title later-->
+	<title>The Dream Catcher</title>  
+    <link rel = "stylesheet" type = "text/css" href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro"/>
+    
+    <link rel= "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet"/>
+<!--    <script type="text/javascript" src="p5.dom.js"></script>-->
+    <script type="text/javascript" src="p5.min.js"></script>
+    
+    <script type="text/javascript" src="navigation.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+
+</head>
+    
+<body>
+    <main>
+    
+        
+    <div class = "container"> 
+        <header id = "header">
+            <div class = "header_content">
+
+                <div id = "top_menu"></div>
+            </div>
+        </header>
+
+        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar-->
+
+        <section class = "intro_container" id = "introPage">
+            <div>
+                <section>
+                    <p class = "intro_title" id = "introTitle"> 
+                        The Dream Catcher
+                    </p>
+                    <br>
+                    <p class = "intro_project_intro" id = "projectIntro"> 
+                        An interactive visualization of dreams
+                    </p>
+                </section>
+            </div>
+               <!-- <form> -->
+            <div class = "btm_nav">  
+            <div class = "circular_btn border" id = "exploreButtonContainer">
+                <div class = "center_btn" id = "exploreButton"> 
+                    <button class = "button_type_1" id = "exploreBtn" onclick = "dreamEntryPage();"> <img src = "images/dc_button.svg"> </button>
+                    <!-- <button class = "button_type_1" id = "exploreBtn" onclick = "dreamEntryPage();"> Explore </button> -->
+                </div>
+            </div>
+            <div class = "nav_text_container" id = "explore"><div class = "nav_text"> Explore</div></div>
+            </div>
+               <!-- </form> -->
+        </section> 
+
+        
+        <section id = "userDream">
+         <p class = "typeface1" id = "dreamPrompt">
+                What did you dream about last night?
+         </p>
+        <div class = "align_center" id = "dreamTextContainer">
+                <div>
+                <label for="dream"></label>
+                <textarea id = "dream" name="mydream" rows= "12" cols = "65" maxlength="1000">Write about your dream here</textarea>  
+                </div>
+
+                <div class = "btm_nav">
+                    <div class = "circular_btn border" id = "catch">
+                        <div class = "center_btn" >
+                        <!-- <input class = "button_type_1" id = "catchDream" type = "button" value = "Catch your Dream" onclick = "startSurvey();"/>  -->
+                            <button class = "button_type_1" id = "catchDream" onclick = "startSurvey();"><img src = "images/dc_button.svg"> </button>
+                         </div>
+                    </div>
+                    <div class = "nav_text_container2"><div class = "nav_text2"> Catch Your Dream</div></div>
+                </div>
+            </div>
+        </section>    
+        
+        
+       <section class = "hide_class" id = "lhsNav">  <!--  class = "side_nav" -->
+            <!--  DISPLAY THE TEXT DESCRIPTION OF DREAM -->
+            <!-- <div id = "dream_content" class = "text_container">
+                <p> Dream Diary </p>
+                <p>  </p>
+                <p id = "dream_entry">
+ 
+                </p>
+            </div> -->
+            
+            <div class = "question_index" id = "questionIndeces">
+                <div class = "circle" id = "circle1" >
+                    <p class = "index" id = "index1" > 01 </p>
+                </div>
+                <span class = "line"></span>
+
+                <div class = "circle" id = "circle2">
+                    <p class = "index" id = "index2"> 02 </p>
+                </div>
+                <span class = "line"></span>
+
+                <div class = "circle" id = "circle3">
+                    <p class = "index" id = "index3"> 03 </p>
+                </div>
+                <span class = "line"></span>
+
+                <div class = "circle" id = "circle4">
+                    <p class = "index" id = "index4"> 04 </p>
+                </div>
+            </div>
+
+            <div id = "cat1" class = "survey">
+                <div class = "survey_inner">
+                <!-- <h3> 01 </h3> -->
+                <p class = "question_style"> *Where were you in your dream? </p>
+                
+                 <form>
+                    <!-- <fieldset> -->
+                    <div class = "options">
+                        <label class = "checkbox_container">  Indoor
+                            <input type = "checkbox" id = "indoor" name = "options1[]" required/>
+                            <span class = "checkmark"></span>
+                        </label> 
+                        
+                        <label class = "checkbox_container"> Outdoor 
+                            <input type = "checkbox" id = "outdoor" name = "options1[]" required/>
+                            <span class = "checkmark"></span>
+                        </label>
+                        
+                        
+                        <label class = "checkbox_container"> Ambiguous 
+                            <input type = "checkbox" id = "ambiguous" name = "options1[]" required/>
+                            <span class = "checkmark"></span>
+                        </label>
+                        
+                        
+                        
+                        <label class = "checkbox_container"> No Setting 
+                            <input type = "checkbox" id = "noSetting" name = "options1[]" required/>
+                            <span class = "checkmark"></span>
+                        </label>
+                        <br>
+                        
+                    </div>
+                    <div class = "submit_now">
+                        <input class = "submit_btn border line_width" type = "button" value = "Next" onclick = "q1SettingViz();" />
+                        <!-- <p class = "arrow_style">&#8605;</p> -->
+                    </div>
+                    <!-- </fieldset>   -->
+                </form>
+
+                </div>
+                
+            </div>
+            
+            
+            <div id = "cat2" class = "survey">
+                <div class = "survey_inner">
+                    <!-- <h3> 02 </h3> -->
+                     <p class = "question_style"> What kinds of objects appeared in your dream? </p>
+                     <form>
+                    <!-- <fieldset> -->
+                         <div class = "options">
+                        
+                            <label class = "checkbox_container"> Architecture 
+                                <input type = "checkbox" id = "architecture" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                            
+                            <label class = "checkbox_container"> Household Articles
+                                <input type = "checkbox" id = "household" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Food or Drink 
+                                <input type = "checkbox" id = "foodDrink" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Implements 
+                                <input type = "checkbox" id = "implements" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Travel 
+                                <input type = "checkbox" id = "travel" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Streets 
+                                <input type = "checkbox" id = "streets" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Regions 
+                                <input type = "checkbox" id = "regions" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Nature
+                                <input type = "checkbox" id = "nature" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Body Parts 
+                                <input type = "checkbox" id = "bodyParts" name = "options2[]"/>
+                                <span class = "checkmark"></span>   
+                            </label>
+                            
+                            <label class = "checkbox_container"> Clothes
+                                <input type = "checkbox" id = "clothes" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Communication 
+                                <input type = "checkbox" id = "communication" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            <label class = "checkbox_container"> Money 
+                                <input type = "checkbox" id = "money" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            
+                            <label class = "checkbox_container"> Miscellaneous
+                                <input type = "checkbox" id = "micellaneous" name = "options2[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                         <div class = "submit_now">
+                            <input class = "submit_btn border line_width" type = "button" value = "Next" onclick = "q2ObjectViz();" />
+                            <!-- <p class = "arrow_style">&#8605;</p> -->
+                        </div>
+                        <!-- </fieldset>   -->
+                    </form>
+                </div>
+            </div>
+            
+            <div id = "cat3" class = "survey">
+                <div class = "survey_inner">
+                    <!-- <h3> 03 </h3> -->
+                    <p class = "question_style"> What type(s) of characters did you encounter in your dream? </p>
+                    <form>
+                    <!-- <fieldset> -->
+                        <div class = "options">
+
+                            <label class = "checkbox_container"> Animal 
+                                <input type = "checkbox" id = "animal" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            <label class = "checkbox_container"> Human 
+                                <input type = "checkbox" id = "human" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            <label class = "checkbox_container">Male
+                                <input type = "checkbox" id = "male" name = "options3[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                         
+                            
+                            <label class = "checkbox_container"> Female 
+                                <input type = "checkbox" id = "female" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            
+                            <label class = "checkbox_container"> Other 
+                                <input type = "checkbox" id = "other" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                           
+                            <label class = "checkbox_container"> Familiar 
+                                <input type = "checkbox" id = "familiar" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            
+                            <label class = "checkbox_container"> Unfamiliar
+                                <input type = "checkbox" id = "unfamiliar" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                           
+                            <label class = "checkbox_container"> Adult 
+                                <input type = "checkbox" id = "adult" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            
+                            <label class = "checkbox_container"> Teenager 
+                                <input type = "checkbox" id = "teenager" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            
+                            <label class = "checkbox_container"> Child 
+                                <input type = "checkbox" id = "child" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            
+                            <label class = "checkbox_container"> Baby 
+                                <input type = "checkbox" id = "baby" name = "options[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        </div>
+                        <div class = "submit_now">
+                            <input class = "submit_btn border line_width" type = "button" value = "Next" onclick = "q3CharacterViz();" />
+                            <!-- <p class = "arrow_style">&#8605;</p> -->
+                        </div>
+                    <!-- </fieldset>   -->
+                    </form>
+                </div>
+            </div>
+            
+            <div id = "cat4" class = "survey">
+                <div class = "survey_inner">
+                    <!-- <h3> 04 </h3> -->
+                    <p class = "question_style"> How did you feel in your dream? </p>
+                    <form>
+                    <!-- <fieldset> -->
+                        <div class = "options">
+                            
+                            <label class = "checkbox_container"> Happiness 
+                                <input type = "checkbox" id = "happiness" name = "options4[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+
+                            
+                            <label class = "checkbox_container"> Apprehension 
+                                <input type = "checkbox" id = "apprehension" name = "options4[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+  
+                            
+                            <label class = "checkbox_container"> Anger 
+                                <input type = "checkbox" id = "anger" name = "options4[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                           
+                            <label class = "checkbox_container"> Confusion 
+                                <input type = "checkbox" id = "confusion" name = "options4[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                            
+                            <label class = "checkbox_container"> Sadness 
+                                <input type = "checkbox" id = "sadness" name = "options4[]"/>
+                                <span class = "checkmark"></span>
+                            </label>
+                        
+                        </div>
+                        <div class = "submit_now">
+                            <input class = "submit_btn border line_width" type = "button" value = "Done" onclick = "q4EmotionsViz();" />
+                        </div>
+                    <!-- </fieldset>   -->
+                    </form>
+                </div>  
+            </div> 
+        </section>
+        
+         <!-- last page  -->
+        <section class = "website_info" id = "lastPage">
+            <div class = "info_top"  id = "topNav">
+                <div id = "homeBtn">
+                    <input class = "submit_btn" type = "button" value = "Home" onclick = "backToHomePage();" />
+                </div>
+                <div id = "aboutBtn">
+                    <input class = "submit_btn" type = "button" value = "About" onclick = "aboutPage();" />
+                </div>
+
+            </div>
+
+            <div class = "info_page" id = "rhsPage">
+                <span class="close_btn" onclick = "closePage();"> &times; </span>
+                <div id = "aboutContainer">
+                    <h3> ABOUT </h3>
+                    <p class = "text_style" id = "aboutText" > “The Dream Catcher” is an interactive visualization of dream contents. Inspired by a set of scientific coding rules known as the <a href="https://dreams.ucsc.edu/Norms/main.html" target="_blank">Hall/Van de Castle System</a>, I attempted to translate a few of its categories — setting, objects, characters and emotions — into visual representations.  Using the dream catcher as a visual framework, each of the four categories corresponds to a different component of the dream catcher. The visual representations are a combination of code generated sketches (p5.js) and hand-drawn illustrations. </p>
+                    
+                </div>
+                <div id = "visualGuideContainer">
+                    <h3> How to read the visualization </h3>
+                    <p class = "text_style" id = "visualText" > image </p>
+                    <div id = "visualGuide"></div>
+                </div>
+            </div>
+
+
+            <div class = "info_bottom" id = "bottomNav">
+                <div id = "visualIndexBtn">
+                    <input class = "submit_btn" type = "button" value = "How to read the visualization?" onclick = "visualGuide();" />
+                </div>
+
+                <div id = "saveBtn">
+                    <input class = "submit_btn" type = "button" value = "Download Your Dream Visualization" onclick = "saveImage();" />
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- <div id = "sideButton" class = "hide_class" onclick = "toggleSideMenu();"></div> -->
+        
+        <section class = "my_canvas" id = "p5Canvas">
+             <div></div>
+        </section>
+        </div>
+   
+    <a href = "#">
+        <div></div>
+    </a>
+    </main>
+</body>
+
+</html>
