@@ -18,7 +18,7 @@ function saveImage(){
 }
 
 function backToHomePage(){
-    window.location = "http://users.design.ucla.edu/~wrzhang/dreams/";
+    window.location = "https://wruizhang.github.io";
 }
 
 
