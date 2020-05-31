@@ -125,7 +125,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(0, 0);
   canvas.style("z-index", "-1"); //("0")
-  bg_img = loadImage('images/dreams_bg.png');
+  bg_img = loadImage('../images/dreams_bg.png');
   bg_opacity = 0;
   overlayColor = color(0, 0, 0, 0);
   
