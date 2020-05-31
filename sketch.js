@@ -44,6 +44,9 @@ let recenter_image = false;
 // # of words per line
 let WORDCOUNT = 6;
 
+// when to resize canvas
+let changeCanvasSize = false;
+let changeCanvasOnWindowResize = false;
 
 let animal_character = {
   radius: 0, 
@@ -113,11 +116,11 @@ function setup() {
   if(windowHeight < 300){
     canvasHeight = windowHeight*2.2;
   } else if(windowHeight < 400){
-    canvasHeight = window.innerHeight*1.8;
+    canvasHeight = windowHeight*1.8;
   } else if (windowHeight < 500){
-    canvasHeight = window.innerHeight*1.6;
+    canvasHeight = windowHeight*1.6;
   } else if (windowHeight < 600){
-    canvasHeight = window.innerHeight*1.4;
+    canvasHeight = windowHeight*1.4;
   }  else if(windowHeight < 800){
     canvasHeight = windowHeight*1.1;
   } 
@@ -161,6 +164,14 @@ function setup() {
 }
 
 function draw() {
+    // change canvas size for q1-last
+    if(changeCanvasSize){
+      resizeMyCanvas();
+      // canvasWidth = window.innerWidth;
+      // canvaHeight = window.innerHeight;
+      changeCanvasSize = false;
+    }
+  
   // set the position of the visualization
   center = [1*canvasWidth/3, canvasHeight/3];  //1.8
   diameter = (canvasWidth + canvasHeight)/8.5;   //8
@@ -169,6 +180,7 @@ function draw() {
 
   background(bg_img);
   animateBackground();
+
 
   if(recenter_image){
     // final Viz if there is no dream text
@@ -714,19 +726,25 @@ window.onresize = function() {
   canvasHeight = window.innerHeight; 
   
   // resize canvas if window too small
-  if(canvasHeight < 300){
-    canvasHeight = window.innerHeight*2.2;
-  } else if(canvasHeight < 400){
-    canvasHeight = window.innerHeight*1.8;
-  } else if (canvasHeight < 500){
-    canvasHeight = window.innerHeight*1.6;
-  }else if (canvasHeight < 600){
-    canvasHeight = window.innerHeight*1.4;
-  } else if(canvasHeight < 800){
-    canvasHeight = window.innerHeight*1.1;
-  } 
+  if(!changeCanvasOnWindowResize ){
+    if(canvasHeight < 200){
+      canvasHeight = window.innerHeight*2.8;
+    } else if(canvasHeight < 300){
+      canvasHeight = window.innerHeight*2.4;
+    } else if(canvasHeight < 400){
+      canvasHeight = window.innerHeight*1.7; //1.8;
+    } else if (canvasHeight < 500){
+      canvasHeight = window.innerHeight*1.6;
+    }else if (canvasHeight < 600){
+      canvasHeight = window.innerHeight*1.4;
+    } else if(canvasHeight < 800){
+      canvasHeight = window.innerHeight*1.1;
+    } 
+} else {
+  canvasWidth = window.innerWidth;
+  canvasHeight = window.innerHeight + 35; 
+}
   
-
   resizeCanvas(this.canvasWidth, this.canvasHeight);
   // resizeCanvas(window.innerWidth, window.innerHeight);
   
@@ -735,12 +753,14 @@ window.onresize = function() {
     stars[i].updatePos(random(this.canvasWidth), random(this.canvasHeight/2));
   }
 
-  
-
   // reset feather positions
   rescaleFeatherPos = true;
 }
 
+function resizeMyCanvas(){
+  canvasHeight = window.innerHeight + 35; 
+  resizeCanvas(this.canvasWidth, this.canvasHeight);
+}
 
 // star class //
 

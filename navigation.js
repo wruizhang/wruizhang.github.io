@@ -70,6 +70,8 @@ function dreamEntryPage(){
 
 function startSurvey(){
     hideStars = true;
+    changeCanvasSize = true;
+    changeCanvasOnWindowResize = true;
     document.getElementById("userDream").style.display = "none";
     document.getElementById("lhsNav").className = "side_nav";
 
@@ -130,6 +132,7 @@ function q1SettingViz(){
     show_q1 = true;
     draw();
     nextQuestion(2);
+    
 
     // highlight Q2 index
     document.getElementById("circle2").style.backgroundColor = "antiquewhite";
