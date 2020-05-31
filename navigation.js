@@ -7,6 +7,13 @@ let hideStars = false;
 let dreamTextArray = [];
 // ---------Site Navigation, Interactive Components---------
 
+function emptyDefaultText(){
+    let dreamText = document.getElementById("dream").value;
+    if (dreamText === default_text){
+        document.getElementById("dream").value = "";
+    }
+}
+
 function nextQuestion(index){
     document.getElementById("cat" + (index-1)).style.display = "none";
     document.getElementById("cat" + (index)).style.display = "inline-block"; // block??
@@ -18,7 +25,7 @@ function saveImage(){
 }
 
 function backToHomePage(){
-    window.location = "http://users.design.ucla.edu/~wrzhang/dreams/";
+    window.location = "https://wruizhang.github.io";
 }
 
 

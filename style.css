@@ -383,14 +383,7 @@ button{
     
     z-index: 2;
     color:antiquewhite;
-	/* background-color: white; */
-    /* background-image: url('images/side_menu.png'); */
     display: inline-block;
-
-    /* Survey Questions on LHS*/
-    /* position: absolute; */
-    /* float: left; */
-
     position: relative;
     float: right;
     
@@ -399,6 +392,14 @@ button{
     padding-top: 60px;
 }
 
+.side_nav::-webkit-scrollbar {
+    display: none;
+}
+
+.side_nav{
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
 
 /* .text_container, .survey{
     width:90%;
@@ -444,21 +445,6 @@ button{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-
-/* .side_btn{
-    cursor: pointer;
-    width: 65px;
-    height: 100%;
-    background-color: antiquewhite;
-    z-index: 3;   
-    display: inline-block; 
-} */
-
-/* #sideButton {
-  transition: margin-left 0.5s;
-} */
-
 
 /* Styling Canvas Element */
 .my_canvas{
