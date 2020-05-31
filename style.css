@@ -1,0 +1,631 @@
+@charset "UTF-8";
+
+body{
+    font-family: "Roboto", Gill Sans, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: block;
+}
+
+/* input, textarea, body{
+    cursor: none;
+} */
+textarea{
+    font-family: "Roboto", Gill Sans, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 2em;
+    border-bottom: 2px dotted white;
+    line-height: 1.5em;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+	margin: 0;
+	padding: 0;
+}
+
+textarea{
+    border: 1px solid #faebd7;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 10px;
+    color:antiquewhite;
+}
+
+button{
+    border-radius: 50%;
+    border-style: none;
+    width:110px;
+    height:110px;  
+    line-height: 1.2em;
+    cursor: pointer;
+}
+
+/* Styling the checkboxes*/
+ .checkbox_container {
+    font-family: "Roboto", Gill Sans, Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    /* font-family: 'Cormorant Garamond', serif;
+    font-weight: 400; */
+    display: block;
+    position: relative;
+    
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /*spacing between survey options*/
+    height: 1.7em;
+    /*left padding*/
+    /* padding-left: 15px; */
+
+}
+
+.checkbox_container input{
+    opacity:0;
+    width: 0;
+    position: absolute;
+    cursor: pointer;
+    
+}
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    /* left: 10px; */
+    left: 0px;
+    height: 10px;
+    width: 80px;
+    /* background-color: #eee; */
+    z-index: -1;
+    
+}
+
+.checkbox_container:hover input ~ .checkmark {
+    /* background-color: orange; */
+    background-image: linear-gradient(to bottom right, #a56d76, #645e89);
+}
+
+
+.checkbox_container input:checked ~ .checkmark {
+    /* background-color: #2196F3; */
+    border-bottom: 2px dotted antiquewhite;
+    
+}
+
+/* input [type = "checkbox"]{
+
+} */
+
+/* Showing the # of questions*/
+.circle{
+    border-radius: 50%;
+    border: 1.5px dotted antiquewhite;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+}
+
+.line{
+    width: 20px;
+    border-bottom: 1.5px dotted antiquewhite;
+    display: inline-block;
+}
+
+
+.question_index{
+    width:100%;
+    height: 50px;
+    /* background-color: aquamarine; */
+    padding-top: 15%; 
+    padding-bottom: 20px;
+
+}
+
+.index{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-top: 20%;
+}
+/******************************/
+
+.container{
+	display: inline-block;
+    width:100%;
+    height:100vh;
+    background-color: transparent;   /*aliceblue*/
+}
+
+.typeface1{
+    font-family: 'Cormorant Garamond', serif; /* Add more backup fonts*/
+}
+
+.typeface2{
+    font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.question_style{
+    font-family: 'Cormorant Garamond', serif; /* Add more backup fonts*/
+    font-size: 24pt;
+    font-weight: 400;
+    line-height: 1.1em;
+}
+
+/* Buttons */
+.button_type_1{
+    border: none;
+    background-color: transparent;
+    /* top: 50%; */
+    color:antiquewhite;
+}
+
+.intro_container{
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*Circular Button Animation*/
+.circular_btn{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 20vh; 
+    border: 2px solid rgba(var(--c),0.5);
+    animation: animation 1.5s infinite alternate linear;
+  
+}
+
+.border{
+    --c: 250, 235, 215;
+}
+
+@keyframes animation {
+    from {border-color: rgba(var(--c), 0);}
+    to {border-color: rgba(var(--c), 1);}
+}
+/*****************************************************************/
+
+.nav_text_container{
+    padding-top: 21vh;
+
+}
+
+.nav_text_container2{
+    padding-top: 7vh;
+}
+
+.nav_text{
+    font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline;
+    color: antiquewhite;
+    text-align: center;
+    position: relative;
+    /* top: 9.5em; */
+    
+    /* font-size: 1.2em; */
+    font-size: 1.2em; 
+}
+
+.nav_text2{
+    font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline;
+    color: antiquewhite;
+    text-align: center;
+    position: relative;
+    /* top: 3.5em; */
+    font-size: 1.2em;   
+}
+
+/**/
+
+.submit_btn, .save_btn{
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    top: 50%;
+    color:antiquewhite;
+    font-size: 1.2em;
+    padding:0;
+    margin-top: 1.5em;
+    cursor: pointer;
+    border-bottom: 2px dotted rgba(var(--c),0.5);
+    animation: animation 1.5s infinite alternate linear;
+}
+
+.line_width{
+    line-height: 1.2em;
+    width: 80px;
+}
+
+#saveBtnContainer{
+    display: none;
+    float: right;
+}
+
+#lastPage{
+    display: none;
+    /* display: inline-block; */
+
+}
+
+
+.arrow_style{
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+#catch{
+    /*Catch your dream top spacing*/
+    /* top: 3em;  */
+    top: 6vh;
+}
+
+.center_btn{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   
+}
+
+#exploreBtn{
+    color:antiquewhite;
+    text-align: center;
+    text-decoration: none;
+    /* border:0; */   
+}
+
+.intro_title{
+    font-family: 'Cormorant Garamond', serif; /* Add more backup fonts*/
+    font-size: 42pt;
+    color: antiquewhite;
+    text-align: center;
+    padding-top: 20vh;
+    font-weight: 500;
+
+}
+
+.intro_project_intro{
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 18pt;
+    color:antiquewhite;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+
+#userDream{
+    display: none;
+}
+
+
+#dreamPrompt{
+    color: antiquewhite;
+    font-size: 26pt;
+    text-align: center;
+    padding-top: 15vh;
+    font-weight: 400;
+    font-weight: 300;
+
+}
+
+.align_center{
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.btm_nav{
+    bottom: 50px;
+}
+
+
+.dream_text_style{
+    
+    width:100%;
+    height: 50px;
+    /* background-color: aquamarine; */
+    padding-top: 50%; 
+    padding-bottom: 20px;
+
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 18pt;
+    color:antiquewhite;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+#dreamTextContainer{
+    padding-top: 20px;
+}
+
+#dream{
+    font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+/*-*/
+
+/*-*/
+.hide_class{
+    display: none;
+}
+
+.side_nav{
+    font-weight: 400;
+    width: 40%;
+    height: 90%;
+    margin-top: 0;
+	bottom: 0;
+    
+    z-index: 2;
+    color:antiquewhite;
+	/* background-color: white; */
+    /* background-image: url('images/side_menu.png'); */
+    display: inline-block;
+
+    /* Survey Questions on LHS*/
+    /* position: absolute; */
+    /* float: left; */
+
+    position: relative;
+    float: right;
+    
+    /* transition: 0.5s; */
+    overflow-y: scroll;
+    padding-top: 60px;
+}
+
+
+/* .text_container, .survey{
+    width:90%;
+    background-color: aqua;
+    height: 40%;
+    margin-left: 10px;
+    display: inline-block;
+} */
+
+.survey{
+    width: 100%;
+    background-color: transparent;
+    height: auto;
+    display: inline-block;
+    float: right;
+    /* padding-top: 20%; */
+
+}
+
+.survey_inner{
+    /* Survey left padding */
+    /* padding-left: 30%;*/
+
+    /* Survey on RHS */
+    padding-right: 30%;
+
+     /* Survey padding top */
+    /* padding-top: 20%;  */
+    display: inline-block;
+   
+}
+
+.options{
+    padding-top: 20px;
+}
+
+#cat2, #cat3, #cat4{
+    display: none;
+}
+
+#dream_content{
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* .side_btn{
+    cursor: pointer;
+    width: 65px;
+    height: 100%;
+    background-color: antiquewhite;
+    z-index: 3;   
+    display: inline-block; 
+} */
+
+/* #sideButton {
+  transition: margin-left 0.5s;
+} */
+
+
+/* Styling Canvas Element */
+.my_canvas{
+    display: inline-block;
+    float: right;
+    /* width: 65%; */
+    height: inherit;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+
+canvas{
+   width: 100%;
+   height: inherit;
+   z-index: 0;
+}
+    
+
+
+.website_info{
+    width: 100vw;
+    height: 100vh;
+    /* display: inline-block; */
+    position: relative;
+    display: hide;
+
+}
+
+.info_top{
+    width: 100vw;
+    height: 80px;
+    /* background-color:blue; */
+    /* border-bottom: 1px solid antiquewhite ; */
+    z-index: 2;
+    display: inline-block;
+}
+
+.info_bottom{
+    width: 100vw;
+    height: 80px;
+    background-color:transparent;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: 2;
+    /* background-color: blue; */
+
+}
+
+.info_page{
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    display: none;
+    position: relative;
+}
+
+.close_btn{
+    position: absolute;
+    font-size: 3em;
+    left: 20px;
+    top: 20px;
+    color: antiquewhite;
+
+}
+
+#homeBtn{
+    /* width: 80px; */
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 2px dotted antiquewhite;
+}
+
+#aboutBtn{
+    /* width: 80px; */
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 2px dotted antiquewhite;
+}
+
+#visualIndexBtn{
+    /* width: 80px; */
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-bottom: 2px dotted antiquewhite;
+}
+
+#saveBtn{
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-bottom: 2px dotted antiquewhite;
+}
+}
+.text_style{
+    font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+}
+
+h3{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
+    color:  antiquewhite;
+}
+#aboutText{
+    color:  antiquewhite;
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 400;
+    font-size: 22px;
+    text-align: left;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+#aboutContainer, #visualGuideContainer{
+    width: 100vw;
+    height: inherit;
+    padding-top: 50px;
+    text-align: center;
+    display: none;
+    background-color: black;
+}
+
+#visualGuide{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: inline-block;
+    /* background-color: blue; */
+    background-image: url('images/HowToReadViz.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+img {
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  img:hover {
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  } 
+
