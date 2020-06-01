@@ -401,13 +401,6 @@ button{
     overflow: -moz-scrollbars-none;
 }
 
-/* .text_container, .survey{
-    width:90%;
-    background-color: aqua;
-    height: 40%;
-    margin-left: 10px;
-    display: inline-block;
-} */
 
 .survey{
     width: 100%;
