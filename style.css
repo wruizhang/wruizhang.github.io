@@ -381,6 +381,10 @@ button{
     display: none;
 }
 
+#lhsNav{
+    overflow: scroll;
+}
+
 .side_nav{
     font-weight: 400;
     width: 40%;
@@ -395,7 +399,8 @@ button{
     float: right;
     
     /* transition: 0.5s; */
-    overflow: scroll;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
     padding-top: 60px;
 }
 
@@ -403,7 +408,7 @@ button{
     display: none;
 }
 
-.side_nav{
+.side_nav, .hide_scroll, #lhsNav{
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 }
@@ -412,9 +417,8 @@ button{
     display: none;
 }
 
-.hide_scroll{
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none; 
+#lhsNav::-webkit-scrollbar{
+    display: none;
 }
 
 .survey{
