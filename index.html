@@ -48,7 +48,7 @@
             <div class = "btm_nav">  
             <div class = "circular_btn border" id = "exploreButtonContainer">
                 <div class = "center_btn" id = "exploreButton"> 
-                    <button class = "button_type_1" id = "exploreBtn" onclick = "dreamEntryPage();"> <img src = "../images/dc_button.svg"> </button>
+                    <button class = "button_type_1" id = "exploreBtn" onclick = "dreamEntryPage();"> <img class = "rotate_img" src = "../images/dc_button.svg"> </button>
                     <!-- <button class = "button_type_1" id = "exploreBtn" onclick = "dreamEntryPage();"> Explore </button> -->
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     <div class = "circular_btn border" id = "catch">
                         <div class = "center_btn" >
                         <!-- <input class = "button_type_1" id = "catchDream" type = "button" value = "Catch your Dream" onclick = "startSurvey();"/>  -->
-                            <button class = "button_type_1" id = "catchDream" onclick = "startSurvey();"><img src = "../images/dc_button.svg"> </button>
+                            <button class = "button_type_1" id = "catchDream" onclick = "startSurvey();"><img class = "rotate_img" src = "../images/dc_button.svg"> </button>
                          </div>
                     </div>
                     <div class = "nav_text_container2"><div class = "nav_text2"> Catch Your Dream</div></div>
@@ -157,8 +157,8 @@
             </div>
             
             
-            <div id = "cat2" class = "survey">
-                <div class = "survey_inner">
+            <div id = "cat2" class = "survey hide_scroll">
+                <div class = "survey_inner hide_scroll">
                     <!-- <h3> 02 </h3> -->
                      <p class = "question_style"> What kinds of objects appeared in your dream? </p>
                      <form>
@@ -385,13 +385,12 @@
                 <span class="close_btn" onclick = "closePage();"> &times; </span>
                 <div id = "aboutContainer">
                     <h3> ABOUT </h3>
-                    <p class = "text_style" id = "aboutText" > “The Dream Catcher” is an interactive visualization of dream contents. Inspired by a set of scientific coding rules known as the <a href="https://dreams.ucsc.edu/Norms/main.html" target="_blank">Hall/Van de Castle System</a>, I attempted to translate a few of its categories — setting, objects, characters and emotions — into visual representations.  Using the dream catcher as a visual framework, each of the four categories corresponds to a different component of the dream catcher. The visual representations are a combination of code generated sketches (p5.js) and hand-drawn illustrations. </p>
-                    
+                    <p class = "text_style hide_scroll" id = "aboutText" > “The Dream Catcher” is an interactive visualization of dream contents. Inspired by a set of scientific coding rules known as the <a href="https://dreams.ucsc.edu/Norms/main.html" target="_blank">Hall/Van de Castle System</a>, I attempted to translate a few of its categories — setting, objects, characters and emotions — into visual representations.  Using the dream catcher as a visual framework, each of the four categories corresponds to a different component of the dream catcher. The visual representations are a combination of code generated sketches (p5.js) and hand-drawn illustrations. </p>
                 </div>
+
                 <div id = "visualGuideContainer">
                     <h3> How to read the visualization </h3>
-                    <p class = "text_style" id = "visualText" > image </p>
-                    <div id = "visualGuide"></div>
+                    <div class = "hide_scroll" id = "visualGuide"> </div>
                 </div>
             </div>
 

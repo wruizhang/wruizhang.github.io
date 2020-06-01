@@ -388,7 +388,7 @@ button{
     float: right;
     
     /* transition: 0.5s; */
-    overflow-y: scroll;
+    overflow: scroll;
     padding-top: 60px;
 }
 
@@ -401,6 +401,14 @@ button{
     overflow: -moz-scrollbars-none;
 }
 
+.hide_scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.hide_scroll{
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
 
 .survey{
     width: 100%;
@@ -541,7 +549,7 @@ canvas{
     display: inline-block;
     border-bottom: 2px dotted antiquewhite;
 }
-}
+
 .text_style{
     font-family: 'Source Sans Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: antiquewhite;
@@ -569,11 +577,12 @@ h3{
     text-align: center;
     display: none;
     background-color: black;
+    overflow-y: scroll;
 }
 
 #visualGuide{
     width: 100%;
-    height: 80%;
+    height: 90vw;
     position: relative;
     display: inline-block;
     /* background-color: blue; */
@@ -584,7 +593,7 @@ h3{
 }
 
 
-img {
+.rotate_img {
     transition: 0.70s;
     -webkit-transition: 0.70s;
     -moz-transition: 0.70s;
@@ -595,7 +604,7 @@ img {
     margin-left: auto;
   }
   
-  img:hover {
+  .rotate_img:hover {
     transition: 0.70s;
     -webkit-transition: 0.70s;
     -moz-transition: 0.70s;
