@@ -404,13 +404,15 @@ button{
     padding-top: 60px;
 }
 
-.side_nav::-webkit-scrollbar {
-    display: none;
-}
 
-.side_nav, .hide_scroll, #lhsNav{
+
+.side_nav, .hide_scroll, #lhsNav, #aboutContainer, #visualGuideContainer{
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
+}
+
+.side_nav::-webkit-scrollbar {
+    display: none;
 }
 
 .hide_scroll::-webkit-scrollbar{
@@ -420,6 +422,16 @@ button{
 #lhsNav::-webkit-scrollbar{
     display: none;
 }
+
+#aboutContainer::-webkit-scrollbar{
+    display: none;
+}
+
+
+#visualGuideContainer::-webkit-scrollbar{
+    display: none;
+}
+
 
 .survey{
     width: 100%;
