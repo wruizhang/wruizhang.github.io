@@ -444,7 +444,7 @@ button{
     display: inline-block;
     float: right;
     /* width: 65%; */
-    height: inherit;
+    /* height: inherit; */
     z-index: -1;
     overflow: hidden;
 }

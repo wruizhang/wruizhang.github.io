@@ -330,13 +330,6 @@ function q4EmotionsViz(){
 
 function lastPage(){
     document.getElementById("cat4").style.display = "none";
-    
-    // document.getElementById("saveBtnContainer").style.display = "inline-block"; 
-    // var content = document.getElementById("dream").value;
-    // dream_entry = content.toString();
-    //console.log(dream_entry);
-    // document.getElementById("dreamText").innerHTML = dream_entry;
-
     // hide the question index bar
     document.getElementById("questionIndeces").style.display = "none";
     document.getElementById("lhsNav").style.display = "none";
@@ -345,7 +338,14 @@ function lastPage(){
     let content = document.getElementById("dream").value;
     dream_entry = content.toString();
 
-    if(document.getElementById("dream").value === default_text){
+    let space_char_count = 0;
+    for (let i = 0; i < dream_entry.length; i++){
+        if(dream_entry.charAt(i) === " "){
+            space_char_count++;
+        }
+    }
+    // if did not add a decription/all input are spaces/default text
+    if(document.getElementById("dream").value === "" || space_char_count === dream_entry.length || document.getElementById("dream").value === default_text){
         add_dream_text = false;
 
     }else{
