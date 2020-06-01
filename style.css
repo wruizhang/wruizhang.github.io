@@ -381,9 +381,9 @@ button{
     display: none;
 }
 
-#lhsNav{
+/* #lhsNav{
     overflow: scroll;
-}
+} */
 
 .side_nav{
     font-weight: 400;
@@ -409,6 +409,7 @@ button{
 .side_nav, .hide_scroll, #lhsNav, #aboutContainer, #visualGuideContainer{
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
 }
 
 .side_nav::-webkit-scrollbar {
@@ -427,10 +428,10 @@ button{
     display: none;
 }
 
-
 #visualGuideContainer::-webkit-scrollbar{
     display: none;
 }
+
 
 
 .survey{
